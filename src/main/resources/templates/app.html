@@ -1,0 +1,29 @@
+<div ng-app="social" ng-controller="userlist-controller">
+    <div class="panel panel-default" ng-repeat="user in users" ng-cloak>
+        <div class="panel-heading">{{user.fistName}} {{user.lastName}}</div>
+        <div class="panel-body">
+            <b>User Name:</b> {{user.userName}} <br/>
+            <b>Password:</b> {{user.password}}
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var app = angular.module("social", []);
+    app.service("loadService", function ($http) {
+        this.getFeedbackPaged = function () {
+            var res = $http.get('/user');
+            return res;
+        };
+    });
+    app.controller("userlist-controller", function($scope, loadService) {
+        init();
+
+        function init() {
+            loadService.getFeedbackPaged().then(function(data){
+                $scope.users = data.data;
+                console.log($scope.users);
+            });
+        }
+    });
+</script>

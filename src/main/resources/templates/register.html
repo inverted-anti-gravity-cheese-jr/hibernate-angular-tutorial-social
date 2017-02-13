@@ -1,0 +1,38 @@
+<div class="login-form">
+    <h1>Register</h1>
+    <input class="form-control" type="text" id="reg-username" placeholder="Username" />
+    <input class="form-control" type="password" id="reg-password" placeholder="Password" />
+    <input class="form-control" type="password" id="reg-reppassword" placeholder="Repeat password" />
+    <input class="form-control" type="text" id="reg-first" placeholder="First name" />
+    <input class="form-control" type="text" id="reg-last" placeholder="Last name" />
+    <input class="form-control" type="date" id="reg-date" placeholder="Date of birth" />
+    <button onclick="register()" class="btn btn-primary">Sign up</button>
+    <script>
+    
+    function register() {
+        var data = {
+            "username": $("#reg-username").val(),
+            "password": $("#reg-password").val(),
+            "reppassword": $("#reg-reppassword").val(),
+            "firstname": $("#reg-first").val(),
+            "lastname": $("#reg-last").val(),
+            "date": $("#reg-date").val()
+        }
+        
+        console.log(data)
+        
+        $.ajax({
+            type: "POST",
+            url: "/register",
+            data: "asdad",
+            success: function() {
+                alert("k");
+            }
+        })
+        
+        $.post("/register", {"test" : "test"}, function() {
+            alert("ok");
+        });
+    }
+    </script>
+</div>

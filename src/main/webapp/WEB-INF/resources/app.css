@@ -1,23 +1,33 @@
 body {
-    color: red;
+    background: url("gfx/nature.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
-[ng-cloak] {
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
     background-image: url("https://i1.wp.com/cdnjs.cloudflare.com/ajax/libs/galleriffic/2.0.1/css/loader.gif");
     width: 48px;
     height: 48px;
 }
 
-[ng-cloak] * {
+[ng\:cloak] *, [ng-cloak] *, [data-ng-cloak] *, [x-ng-cloak] *, .ng-cloak *, .x-ng-cloak * {
     display: none !important;
 }
 
-/*
-[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-    display: none !important;
-    background-image: url("https://i1.wp.com/cdnjs.cloudflare.com/ajax/libs/galleriffic/2.0.1/css/loader.gif");
-    min-width: 48px;
-    min-height: 48px;
+.login-form {
+    width: 300px;
+    padding: 2px 15px 15px 15px;
+    margin: 100px auto 0 auto;
+    background-color: bisque;
+    box-shadow: black 0px 0px 3px;
 }
 
-*/
+.login-form .btn {
+    width: 100%;
+}
+
+.login-form input {
+    margin-bottom: 5px;
+}

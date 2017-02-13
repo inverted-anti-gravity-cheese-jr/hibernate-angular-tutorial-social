@@ -5,7 +5,7 @@ INSERT INTO USER VALUES(
     'Pudzian',
     '1991-01-14',
     'pudzi123',
-    'SALT'
+    '74006a0ca3aadd96'
 ), (
     2,
     'rodzynek',
@@ -13,5 +13,5 @@ INSERT INTO USER VALUES(
     'Rodzynek',
     '1981-06-19',
     'qwert12',
-    'SALT'
+    'd74a2d78f80596f3'
 );
