@@ -1,0 +1,2 @@
+CREATE USER IF NOT EXISTS hibernate PASSWORD 'hibernate123';
+GRANT ALL ON USER TO hibernate;
